@@ -3,27 +3,27 @@ This repo contains the PyTorch version of OpenPose with the associated Dockerfil
 
 ## Running OpenPose using docker
 
-### Install docker
-* Instructions to install docker are here:
+* ### Install docker
+Instructions to install docker are here:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-### Pull the image
-* Once docker is installed, you can pull the openpose_pytorch image by doing the following:
+* ### Pull the image
+Once docker is installed, you can pull the openpose_pytorch image by doing the following:
 ```
 docker pull prajwalchidananda/openpose_pytorch
 ```
 This step typically takes around 40 min to complete.
 
-### Build the docker image
-* Alternatively, you can build the image on your own by doing the following:
+* ### Build the docker image
+Alternatively, you can build the image on your own by doing the following:
 ```
 cd /path/to/openpose_pytorch
 docker build -t openpose_pytorch:latest .
 ```
 The build step typically takes around 20 min to complete.
 
-### Run OpenPose
-* Once you have a docker image, you can mount openpose_pytorch and run the demo by doing the following:
+* ### Run OpenPose
+Once you have a docker image, you can mount openpose_pytorch and run the demo by doing the following:
 ```
 docker run -v /path/to/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose -it openpose_pytorch:latest /bin/bash
 cd pytorch-openpose
