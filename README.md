@@ -28,7 +28,7 @@ docker build -t openpose_pytorch:latest .
 ```
 The build step typically takes around 20 min to complete.
 
-### Run OpenPose
+### Run OpenPose on a single image
 Once you have a docker image, you can mount openpose_pytorch and run the demo by doing the following:
 ```
 docker run -v /path/to/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose -it openpose_pytorch:latest /bin/bash
