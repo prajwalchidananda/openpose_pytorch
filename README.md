@@ -3,6 +3,12 @@ This repo contains the PyTorch version of OpenPose with the associated Dockerfil
 
 ## Running OpenPose using docker
 
+### Clone the repository
+```
+git clone https://github.com/prajwalchidananda/openpose_pytorch.git
+cd /path/to/openpose_pytorch
+```
+
 ### Install docker
 Instructions to install docker are here:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
