@@ -12,6 +12,7 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ```
 docker pull prajwalchidananda/openpose_pytorch
 ```
+This step typically takes around 40 min to complete.
 
 ### Build the docker image
 * Alternatively, you can build the image on your own by doing the following:
