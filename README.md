@@ -46,4 +46,6 @@ docker run -ti --rm \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
        openpose_pytorch:latest \
        /bin/bash
+cd pytorch-openpose
+python demo_webcam.py
 ```
