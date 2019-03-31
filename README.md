@@ -8,7 +8,7 @@ Instructions to install docker are here:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 ### Pull the image
-Once docker is installed, you can pull the opencv_pytorch image by doing the following:
+Once docker is installed, you can pull the openpose_pytorch image by doing the following:
 ```
 docker pull prajwalchidananda/openpose_pytorch
 ```
