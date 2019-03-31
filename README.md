@@ -1,13 +1,11 @@
 # Openpose
-This repo contains the PyTorch version of OpenPose with the associated Dockerfile.
+This repo contains the PyTorch version of OpenPose with the associated Dockerfile. The model weights for the original OpenPose are here: [dropbox](https://www.dropbox.com/sh/7xbup2qsn7vvjxo/AABWFksdlgOMXR_r5v3RwKRYa?dl=0). Save them here:  /path/to/openpose_pytorch/pytorch-openpose/model
 
 ## Running OpenPose using docker
 
 ### Install docker
 Instructions to install docker are here:
-```
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
-```
 
 ### Pull the image
 Once docker is installed, you can pull the opencv_pytorch image by doing the following:
