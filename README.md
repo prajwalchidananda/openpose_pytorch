@@ -38,5 +38,6 @@ docker run -ti --rm \
        --device=/dev/video0 \
        -e DISPLAY=$DISPLAY \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
-       openpose_pytorch:latest
+       openpose_pytorch:latest \
+       /bin/bash
 ```
