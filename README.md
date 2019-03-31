@@ -34,6 +34,7 @@ python demo.py
 To send the webcam stream into docker container, use the device argument when running the docker image. Inorder to display the results, you'll have to provide docker with access to your X server. The following run command does both of these:
 ```
 docker run -ti --rm \
+       -v /path/to/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose \
        --device=/dev/video0 \
        -e DISPLAY=$DISPLAY \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
