@@ -1,5 +1,12 @@
+#!/usr/bin/env python3
 import sys
+import os
+ROOT = os.path.dirname(os.path.abspath(__file__))
+PYPATH = os.path.join(ROOT, 'python')
+sys.path.append(ROOT)
+sys.path.append(PYPATH)
 sys.path.insert(0, 'python')
+print(sys.path)
 import cv2
 import model
 import util
@@ -9,8 +16,8 @@ import matplotlib.pyplot as plt
 import copy
 import numpy as np
 
-body_estimation = Body('model/body_pose_model.pth')
-hand_estimation = Hand('model/hand_pose_model.pth')
+body_estimation = Body(os.path.join(ROOT, 'model/body_pose_model.pth'))
+hand_estimation = Hand(os.path.join(ROOT, 'model/hand_pose_model.pth'))
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)

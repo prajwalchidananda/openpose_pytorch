@@ -1,5 +1,12 @@
+#!/usr/bin/env python3
 import sys
+import os
+ROOT = os.path.dirname(os.path.abspath(__file__))
+PYPATH = os.path.join(ROOT, 'python')
+sys.path.append(ROOT)
+sys.path.append(PYPATH)
 sys.path.insert(0, 'python')
+print(sys.path)
 import cv2
 import model
 import util
@@ -9,15 +16,16 @@ import matplotlib.pyplot as plt
 import copy
 import numpy as np
 
-body_estimation = Body('model/body_pose_model.pth')
-hand_estimation = Hand('model/hand_pose_model.pth')
+body_estimation = Body(os.path.join(ROOT, 'model/body_pose_model.pth'))
+hand_estimation = Hand(os.path.join(ROOT, 'model/hand_pose_model.pth'))
 
-test_image = 'images/demo.jpg'
+test_image = os.path.join(ROOT, 'images/demo.jpg')
 oriImg = cv2.imread(test_image)  # B,G,R order
 candidate, subset = body_estimation(oriImg)
 canvas = copy.deepcopy(oriImg)
 
 canvas = util.draw_bodypose(canvas, candidate, subset)
+'''
 # detect hand
 hands_list = util.handDetect(candidate, subset, oriImg)
 
@@ -40,7 +48,7 @@ for x, y, w, is_left in hands_list:
     all_hand_peaks.append(peaks)
 
 canvas = util.draw_handpose(canvas, all_hand_peaks)
-
+'''
 cv2.imwrite('testout.png', canvas)
 plt.imshow(canvas[:, :, [2, 1, 0]])
 plt.axis('off')
