@@ -36,7 +36,7 @@ cd pytorch-openpose
 python demo.py
 ```
 
-### Run OpenPose on your webcam in realtime (Ubuntu only, experimental)
+### Run OpenPose on your webcam in realtime (Ubuntu only)
 To send the webcam stream into docker container, use the device argument when running the docker image. Inorder to display the results, you'll have to provide docker with access to your X server. The following does both of these and starts the webcam demo:
 ```
 xhost +
