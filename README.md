@@ -5,6 +5,9 @@ This repo contains the PyTorch version of OpenPose with the associated Dockerfil
 
 ### Clone the repository
 ```
+cd ~
+mkdir code
+cd code
 git clone https://github.com/prajwalchidananda/openpose_pytorch.git
 cd openpose_pytorch
 ```
@@ -23,7 +26,7 @@ This step typically takes around 40 min to complete.
 ### Build the docker image
 Alternatively, you can build the image on your own by doing the following:
 ```
-cd /path/to/openpose_pytorch
+cd ~/code/openpose_pytorch
 docker build -t openpose_pytorch:latest .
 ```
 The build step typically takes around 20 min to complete.
