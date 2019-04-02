@@ -31,7 +31,7 @@ The build step typically takes around 20 min to complete.
 ### Run OpenPose on a single image
 Once you have a docker image, you can mount openpose_pytorch and run the demo by doing the following:
 ```
-docker run -v /path/to/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose -it openpose_pytorch:latest /bin/bash
+docker run -v ~/code/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose -it prajwalchidananda/openpose_pytorch:latest /bin/bash
 cd pytorch-openpose
 python demo.py
 ```
@@ -41,10 +41,10 @@ To send the webcam stream into docker container, use the device argument when ru
 ```
 xhost +
 sudo docker run -ti --rm \
-       -v /path/to/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose \
+       -v ~/code/openpose_pytorch/pytorch-openpose:/root/pytorch-openpose \
        --device=/dev/video0 \
        -e DISPLAY=$DISPLAY \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
-       openpose_pytorch:latest \
+       prajwalchidananda/openpose_pytorch:latest \
        /root/pytorch-openpose/demo_webcam_body.py
 ```
