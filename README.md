@@ -5,7 +5,7 @@ This repo contains the PyTorch version of OpenPose with the associated Dockerfil
 
 ### Clone the repository
 ```
-cd ~
+cd
 mkdir code
 cd code
 git clone https://github.com/prajwalchidananda/openpose_pytorch.git
