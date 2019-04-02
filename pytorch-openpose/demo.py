@@ -25,7 +25,6 @@ candidate, subset = body_estimation(oriImg)
 canvas = copy.deepcopy(oriImg)
 
 canvas = util.draw_bodypose(canvas, candidate, subset)
-'''
 # detect hand
 hands_list = util.handDetect(candidate, subset, oriImg)
 
@@ -48,8 +47,7 @@ for x, y, w, is_left in hands_list:
     all_hand_peaks.append(peaks)
 
 canvas = util.draw_handpose(canvas, all_hand_peaks)
-'''
 cv2.imwrite('testout.png', canvas)
-plt.imshow(canvas[:, :, [2, 1, 0]])
-plt.axis('off')
-plt.show()
+#plt.imshow(canvas[:, :, [2, 1, 0]])
+#plt.axis('off')
+#plt.show()
