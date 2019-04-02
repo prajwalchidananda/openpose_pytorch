@@ -23,11 +23,11 @@ docker pull prajwalchidananda/openpose_pytorch
 ```
 This step typically takes around 40 min to complete.
 
-### Build the docker image
+### Build the docker image (Optional)
 Alternatively, you can build the image on your own by doing the following:
 ```
 cd ~/code/openpose_pytorch
-docker build -t openpose_pytorch:latest .
+docker build -t prajwalchidananda/openpose_pytorch:latest .
 ```
 The build step typically takes around 20 min to complete.
 
