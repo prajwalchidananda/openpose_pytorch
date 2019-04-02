@@ -21,7 +21,7 @@ Once docker is installed, you can pull the openpose_pytorch image by doing the f
 ```
 docker pull prajwalchidananda/openpose_pytorch
 ```
-This step typically takes around 40 min to complete.
+This step typically takes around 30 min to complete.
 
 ### Build the docker image (Optional)
 Alternatively, you can build the image on your own by doing the following:
